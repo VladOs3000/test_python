@@ -1,9 +1,13 @@
 <h1>Shinema</h1>
 <p>Shanchi</p>
 <!--{{ kniteka }}-->
-{% for el in kniteka %}
-    <div style="background: yellow;">
-        <h3>Назва: {{ el.title }}</h3>
-        <h3>Анотація: {{ el.anons }}</h3><br>
-    </div>
-{% endfor %}
+{% if kniteka %}
+    {% for el in kniteka %}
+        <div style="background: yellow;">
+            <h3>Назва: {{ el.title }}</h3>
+            <h3>Анотація: {{ el.anons }}</h3><br>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>Записами тут і не пахло!</p>
+{% endif %}
