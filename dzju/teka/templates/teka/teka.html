@@ -1,13 +1,21 @@
-<h1>Shinema</h1>
-<p>Shanchi</p>
+{% extends 'main/layout/frame.html' %}
+
+{% block title %}
+    Книготека/Каталог
+{% endblock %}
+
+{% block content %}
 <!--{{ kniteka }}-->
-{% if kniteka %}
-    {% for el in kniteka %}
-        <div style="background: yellow;">
-            <h3>Назва: {{ el.title }}</h3>
-            <h3>Анотація: {{ el.anons }}</h3><br>
-        </div>
-    {% endfor %}
-{% else %}
-    <p>Записами тут і не пахло!</p>
-{% endif %}
+    <h3 style="text-align: center">Каталог</h3>
+    {% if kniteka %}
+        {% for el in kniteka %}
+            <div class="alert alert-warning">
+                Назва: {{ el.title }}<br>
+                Анотація: {{ el.anons }}<br>
+                <div style="text-align: right">{{el.date}}</div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Записами тут і не пахло!</p>
+    {% endif %}
+{% endblock %}
