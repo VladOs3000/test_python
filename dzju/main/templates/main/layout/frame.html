@@ -1,0 +1,55 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+<!--top-->
+<div>
+    <h1 style='width:100%; margin-top: 0px' align='center'>
+        <img style="width: 32px; height: 32px;" src="{% static 'main/img/UAround.bmp' %}" alt="UA" title="img"> Книготека онлайн
+        <img style="width: 32px; height: 32px;" src="{% static 'main/img/UAround.bmp' %}" alt="UA" title="img">
+    </h1>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm" style="text-align: center;">
+            <a href='http://127.0.0.1:8000' class='perehod'><img style="width: 24px; height: 24px;" src="{% static 'main/img/home.svg' %}" alt="UA" title="img">Головна</a>
+        </div>
+        <div class="col-sm" style="text-align: center;">
+            <a href='/about' class='perehod'><img style="width: 24px; height: 24px;" src="{% static 'main/img/about-me.svg' %}" alt="UA" title="img">Про сайт</a>
+        </div>
+        <div class="col-sm" style="text-align: center;">
+            <a href='/catalog' class='perehod'><img style="width: 24px; height: 24px;" src="{% static 'main/img/books-catalog.svg' %}" alt="UA" title="img">Каталог</a>
+        </div>
+        <div class="col-sm" style="text-align: center;">
+            <a href='/contacts' class='perehod'><img style="width: 24px; height: 24px;" src="{% static 'main/img/address-book.svg' %}" alt="UA" title="img"> Контакти</a>
+        </div>
+        <div class="col-sm" style="text-align: center;">
+            <a href='/door' class='perehod'><img style="width: 24px; height: 24px;" src="{% static 'main/img/door-open-fill.svg' %}" alt="UA" title="img">Вхід</a>
+        </div>
+    </div>
+</div>
+<!-- top end -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 col-md-3 col-lg-3">
+                {% include 'main/layout/mainleft.html' %}
+            </div>
+            <div class="col-sm-8 col-md-6 col-lg-6">
+                {% block content %}
+                {% endblock %}
+            
+        </div>
+    </div>
+    <main>
+    </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'main/layout/frame.html' %}
+
+{% block title %}
+    Книготека/Публікувати
+{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Опублікувати</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.anons }}<br>
+            {{ form.texstura }}<br>
+            {{ form.date }}<br>
+            <span>{{ error }}</span>
+<!--            <input type="text" placeholder="Назва" class="form-control"><br>-->
+<!--            <input type="text" placeholder="Анонс" class="form-control"><br>-->
+<!--            <textareа placeholder="Текст" class="form-control"></textareа><br>-->
+<!--            <input type="date" class="form-control"><br>-->
+<!--            <input type="time" class="form-control"><br>-->
+            <button class="btn btn-success" type="submit">Опублікувати</button>
+        </form>
+    </div>
+{% endblock %}
