@@ -1,19 +1,35 @@
 from .models import Kniteka
-from django.forms import ModelForm, TextInput, DateTimeInput, Textarea
+from django.forms import ModelForm, TextInput, DateTimeInput, Textarea, Select, FileField
 
 class KnitekaForm(ModelForm):
     class Meta:
         model = Kniteka
-        fields = ['title', 'anons']
+        fields = ['title', 'anons', 'gener1', 'gener2', 'gener3', 'formatbook', 'path']
 
         widgets = {
             'title': TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Назва'
             }),
-            'anons': TextInput(attrs={
+            'gener1': Select(attrs={
                 'class': 'form-control',
-                'placeholder': 'Анонс'
+                'placeholder': 'Жанр'
+            }),
+            'gener2': Select(attrs={
+                'class': 'form-control',
+                'placeholder': 'Жанр'
+            }),
+            'gener3': Select(attrs={
+                'class': 'form-control',
+                'placeholder': 'Жанр'
+            }),
+            'formatbook': Select(attrs={
+                'class': 'form-control',
+                'placeholder': 'Назва'
+            }),
+            'anons': Textarea(attrs={
+                'class': 'form-control',
+                'placeholder': 'Анотація'
             }),
             # 'texstura': Textarea(attrs={
             #     'class': 'form-control',
