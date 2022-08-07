@@ -1,0 +1,14 @@
+{% extends 'main/layout/frame.html' %}
+
+{% block title %}
+    Книготека/Безумно
+{% endblock %}
+
+{% block content %}
+    <p>base</p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Upload book</button>
+    </form>
+{% endblock %}

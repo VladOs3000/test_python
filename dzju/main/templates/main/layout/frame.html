@@ -27,7 +27,7 @@
             <a href='http://127.0.0.1:8000' class='perehod'><img style="width: 24px; height: 24px;" src="{% static 'main/img/home.svg' %}" alt="UA" title="img">Головна</a>
         </div>
         <div class="col-sm" style="text-align: center;">
-            <a href='/about' class='perehod'><img style="width: 24px; height: 24px;" src="{% static 'main/img/about-me.svg' %}" alt="UA" title="img">Про сайт</a>
+            <a href='/teka/crazy' class='perehod'><img style="width: 24px; height: 24px;" src="{% static 'main/img/about-me.svg' %}" alt="UA" title="img">Про сайт</a>
         </div>
         <div class="col-sm" style="text-align: center;">
             <a href='http://127.0.0.1:8000/teka/catalog' class='perehod'><img style="width: 24px; height: 24px;" src="{% static 'main/img/books-catalog.svg' %}" alt="UA" title="img">Каталог</a>
@@ -43,10 +43,10 @@
 <!-- top end -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-2 col-md-3 col-lg-3">
+            <div class="col-sm-1 col-md-2 col-lg-2 alert alert-warning">
                 {% include 'main/layout/mainleft.html' %}
             </div>
-            <div class="col-sm-8 col-md-6 col-lg-6">
+            <div class="col-sm-10 col-md-8 col-lg-8">
                 {% block content %}
                 {% endblock %}
             

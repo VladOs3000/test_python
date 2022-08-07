@@ -1,4 +1,6 @@
+from django import forms
 from .models import Kniteka
+from .models import Book
 from django.forms import ModelForm, TextInput, DateTimeInput, Textarea, Select, FileField
 
 class KnitekaForm(ModelForm):
@@ -41,3 +43,8 @@ class KnitekaForm(ModelForm):
             # }),
 
         }
+
+class BookForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = ['title', 'author', 'pdf']

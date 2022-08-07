@@ -1,0 +1,14 @@
+{% extends 'main/layout/frame.html' %}
+
+{% block title %}
+    Книготека/{{ kniteka.title }}
+{% endblock %}
+
+{% block content %}
+<!--{{ kniteka }}-->
+    <div class="features">
+        <h3 style="text-align: center">{{ kniteka.title }}</h3>
+        <h3>{{ kniteka.author }}</h3>
+        <h3>{{ kniteka.formatbook }}</h3>
+    </div>
+{% endblock %}
