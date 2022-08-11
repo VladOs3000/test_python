@@ -1,9 +1,7 @@
 {% load static %}
-
 <h3>Меню</h3>
-<ul>
-    <li><a href='http://127.0.0.1:8000' class='perehod'>Головна</a></li>
-    {% for elem in gener %}
-    <li><a href="{{ elem.1 }}">{{ elem.0 }}</a></li>
-    {% endfor %}
-</ul>
+
+<div id='geners'></div>
+<script src="{% static 'main/js/main.js' %}"></script>
+<!--    <li><a href='http://127.0.0.1:8000' class='perehod'>Головна</a></li>-->
+<!--    <li><a href=""></a></li>-->
