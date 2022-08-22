@@ -13,7 +13,10 @@
                 Назва: {{ el.title }}<br>
                 Анотація: {{ el.anons }}<br>
                 <div style="text-align: right">{{el.date}}</div>
-                <div><a href="{% url 'catalog_detail' el.id %}" class="btn btn-warning">Читати онлайн</a></div>
+                <div>
+                    <a href="{% url 'catalog_detail' el.id %}" class="btn btn-warning">Читати онлайн</a>
+<!--                    <a href="{% url 'catalog_detail' el.path %}" class="btn btn-warning">Завантажити</a>-->
+                </div>
             </div>
         {% endfor %}
     {% else %}

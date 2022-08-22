@@ -6,9 +6,8 @@
 
 {% block content %}
     <p>base</p>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Upload book</button>
-    </form>
+    {% for post in file %}
+    <h2>{{post.title}}</h2>
+    <a href="{{post.adminupload.url}}" download="{{post.adminupload.url}}">Download</a>
+    {% endfor %}
 {% endblock %}

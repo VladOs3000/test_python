@@ -3,5 +3,18 @@
 
 <div id='geners'></div>
 <script src="{% static 'main/js/main.js' %}"></script>
+<script>
+    var geners = document.getElementById("geners");
+    gen.forEach(function(item, i, gen) {
+        var br = document.createElement('br');
+        var a = document.createElement('a');
+        var linkText = document.createTextNode(item[0]);
+        a.appendChild(linkText);
+        a.title = item[0];
+        a.href = "http://127.0.0.1:8000/teka/"+item[1];
+        geners.appendChild(a);
+        geners.appendChild(br);
+    });
+</script>
 <!--    <li><a href='http://127.0.0.1:8000' class='perehod'>Головна</a></li>-->
 <!--    <li><a href=""></a></li>-->
